@@ -15,8 +15,10 @@ Install warmup scheduler
 `cd ..`
 
 
-* activate environment
+activate environment
+
 `conda activate pytorch1`
 
-*run demo`
+run demo
+
 `python demo.py --task Deblurring --input_dir ./samples/input/ --result_dir ./samples/output/`
