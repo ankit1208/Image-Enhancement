@@ -1,24 +1,34 @@
 # Image-Enhancement
 Image deblurring to achieve super resolution
 
-For installing, follow these intructions
+### For installing, follow these intructions
+```bash
+$ conda create -n pytorch1 python=3.7
 
-`conda create -n pytorch1 python=3.7`
-`conda activate pytorch1`
-`conda install pytorch=1.1 torchvision=0.3 cudatoolkit=9.0 -c pytorch`
-`pip install matplotlib scikit-image opencv-python yacs joblib natsort h5py tqdm`
+$ conda activate pytorch1
 
-Install warmup scheduler
+$ pip install torch==1.9.0+cu111 torchvision==0.10.0+cu111 torchaudio==0.9.0 -f https://download.pytorch.org/whl/torch_stable.html
 
-`cd pytorch-gradual-warmup-lr`
-`python setup.py install`
-`cd ..`
+$ pip install matplotlib scikit-image opencv-python yacs joblib natsort h5py tqdm google-cloud-vision flask
+```
 
+### Install warmup scheduler
 
-activate environment
+```bash
+$ cd pytorch-gradual-warmup-lr
 
-`conda activate pytorch1`
+$ python setup.py install
 
-run demo
+$ cd ..
+```
 
-`python demo.py --task Deblurring --input_dir ./samples/input/ --result_dir ./samples/output/`
+### Activate environment
+```bash
+For Unix: $ conda activate pytorch1
+For Windows: $ source activate pytorch1
+```
+
+### Run demo
+```bash
+$ python demo.py --task Deblurring --input_dir ./samples/input/ --result_dir ./samples/output/
+```

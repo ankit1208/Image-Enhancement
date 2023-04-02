@@ -30,9 +30,9 @@ def get_latest_file(path,*paths):
 def predict():
     if request.method == 'POST':
         f = request.files['file']
-        os.chdir('C:\\Users\\ASUS\\Desktop\\beproj\\Image-Enhancement\\samples\\input')
+        os.chdir('D:\\Github_Projects\\Image-Enhancement\\samples\\input')
         f.save(f.filename)
-        os.chdir('C:\\Users\\ASUS\\Desktop\\beproj\\Image-Enhancement')
+        os.chdir('D:\\Github_Projects\\Image-Enhancement')
         demo.demo()
         fname=f.name
         print(fname)
