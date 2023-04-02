@@ -28,7 +28,7 @@ For Unix: $ conda activate pytorch1
 For Windows: $ source activate pytorch1
 ```
 
-### Run demo
+### Run server
 ```bash
-$ python demo.py --task Deblurring --input_dir ./samples/input/ --result_dir ./samples/output/
+$ python app.py
 ```
