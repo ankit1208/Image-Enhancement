@@ -32,3 +32,10 @@ For Windows: $ source activate pytorch1
 ```bash
 $ python app.py
 ```
+
+### Run frontend
+```bash
+$ cd frontend
+$ npm install
+$ npm run dev
+```

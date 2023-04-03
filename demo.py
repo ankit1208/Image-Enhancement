@@ -71,6 +71,7 @@ def demo():
 
     img_multiple_of = 8
 
+    images = []
     for file_ in files:
         img = Image.open(file_).convert('RGB')
         input_ = TF.to_tensor(img).unsqueeze(0).cuda()
@@ -96,8 +97,10 @@ def demo():
 
         f = os.path.splitext(os.path.split(file_)[-1])[0]
         save_img((os.path.join(out_dir, f+'.png')), restored)
+        images.append(restored)
 
     print(f"Files saved at {out_dir}")
+    return images[0]
 
 def ocr(path):
     #the JSON file you downloaded in step 5 above

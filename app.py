@@ -1,5 +1,5 @@
-from flask import Flask, request
-# from PIL import Image
+from flask import Flask, request, send_file
+from PIL import Image
 # import joblib
 
 # import pickle
@@ -7,6 +7,7 @@ import os
 import demo
 import time
 import glob
+import io
 
 
 
@@ -26,21 +27,19 @@ def get_latest_file(path,*paths):
     return filename
 
 # Define a route to handle the request
-@app.route('/predict', methods=['POST','GET'])
+@app.route('/api/predict', methods=['POST', 'GET'])
 def predict():
     if request.method == 'POST':
         f = request.files['file']
         os.chdir('D:\\Github_Projects\\Image-Enhancement\\samples\\input')
         f.save(f.filename)
         os.chdir('D:\\Github_Projects\\Image-Enhancement')
-        demo.demo()
-        fname=f.name
-        print(fname)
-        # time.sleep(9)
-        # path=f'samples\output\img1.png'
-        # out=demo.ocr(path)
-        # print(out)
-        return 'marja'
+        image = demo.demo()
+        img = Image.fromarray(image)
+        image_object = io.BytesIO()
+        img.save(image_object, 'PNG')
+        image_object.seek(0)
+        return send_file(image_object, mimetype='image/PNG')
     elif request.method=="GET":
         # folder_path = r'samples\output'
         # file_type = r'*png'
@@ -57,4 +56,4 @@ def predict():
 
 
 if __name__ == "__main__":
-    app.run(debug = "True",port=3000)
+    app.run(debug = "True",port=8080)
