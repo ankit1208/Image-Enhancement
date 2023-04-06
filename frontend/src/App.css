@@ -60,6 +60,9 @@
   z-index: 1;
 }
 
+.OCRText {
+  text-align: center;
+}
 .spinner {
   width: 64px;
   height: 64px;
