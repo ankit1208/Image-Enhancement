@@ -1,7 +1,5 @@
 import { useState } from 'react'
 import axios from "axios";
-import InputImage from "./assets/input/img1.jpg";
-import OutputImage from "./assets/output/img1.png";
 import ArrowRight from "./assets/arrow-right.svg";
 import './App.css'
 
