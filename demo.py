@@ -30,7 +30,9 @@ torch.cuda.empty_cache()
 # parser.add_argument('--task', required=True, type=str, help='Task to run', choices=['Deblurring'])#, 'Denoising', 'Deraining'])
 
 # args = parser.parse_args()
-def demo():
+
+
+def demo(filename):
     def save_img(filepath, img):
         cv2.imwrite(filepath,cv2.cvtColor(img, cv2.COLOR_RGB2BGR))
 
@@ -97,7 +99,8 @@ def demo():
 
         f = os.path.splitext(os.path.split(file_)[-1])[0]
         save_img((os.path.join(out_dir, f+'.png')), restored)
-        images.append(restored)
+        if f == filename.split(".")[0]:
+            images.append(restored)
 
     print(f"Files saved at {out_dir}")
     return images[0]
