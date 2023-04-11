@@ -5,6 +5,14 @@
   justify-content: center;
 }
 
+.info {
+  width: 70%;
+  margin: auto;
+  text-align: center;
+  font-size: 18px;
+  color: #2C3033;
+}
+
 .resetIcon {
   cursor: pointer;
   margin-left: 1rem;
@@ -16,10 +24,13 @@
 }
 
 .submitButton {
-  background-color: #DCE2F2;
-  color: #646B7B;
+  background-color: #F3F1FE;
+  color: #2C3033;
   width: 200px;
   height: 50px;
+  border: 1px solid #DFDEE3;
+  border-radius: 15px;
+  font-size: 16px;
 }
 
 .previewText {
@@ -70,10 +81,10 @@
 }
 
 .OCRDiv {
-  background-color: #DCE2F2;
+  background-color: #F3F1FE;
   width: fit-content;
   height: fit-content;
-  color: #646B7B;
+  color: #2C3033;
   font-size: 20px;
   padding: 2px 20px;
   border-radius: 15px;
@@ -86,7 +97,7 @@
   width: 64px;
   height: 64px;
   border: 8px solid;
-  border-color: #DCE2F2 transparent #DCE2F2 transparent;
+  border-color: #F3F1FE transparent #F3F1FE transparent;
   border-radius: 50%;
   animation: spin-anim 1.2s linear infinite;
   margin-top: 20%;
@@ -120,7 +131,7 @@
 }
 
 .sub-heading-file-upload {
-  color: #646B7B;
+  color: #2C3033;
   font-size: 14px;
   font-weight: 400;
   margin: 0;
@@ -137,9 +148,9 @@
   justify-content: center;
   border-width: 2px;
   border-radius: 1rem;
-  border-style: dashed;
   border-color: #cbd5e1;
-  background-color: #DCE2F2;
+  background-color: #FFFFFF;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
 .drag-area-wrapper {
@@ -150,10 +161,10 @@
   margin-top: 2.5rem;
   cursor: pointer;
   font-size: 1rem;
-  background-color: #F0F3FD;
+  background-color: #F3F1FE;
   width: 90%;
   height: 50%;
-  border: 1px dashed;
+  border: 1px solid #DFDEE3;
   border-radius: 10px;
 }
 

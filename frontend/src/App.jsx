@@ -110,6 +110,12 @@ function App() {
         )}
       </h1>
       {!outputFile && (
+        <div className="info">
+          <p>Hey there! Welcome to Automatic Image Enhancement App and Text Extraction. This app uses (and never keeps or stores!) the image you want to analyze and produces a high resolution image of it along with any text detected in the image.</p>
+          <p>To begin, click on the upload button and select the image you wish to enhance.</p>
+        </div>
+      )}
+      {!outputFile && (
         <form className="form-file-upload" onDragEnter={handleDrag} onSubmit={(e) => e.preventDefault()}>
           <input ref={inputRef} type="file" className="input-file-upload" multiple={false} onChange={handleChange} />
           <label htmlFor="input-file-upload" className="label-file-upload">
